@@ -1,0 +1,123 @@
+.max {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  .list { //联系人列表
+    height: 100%;
+    width: 20%;
+    background: aqua;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .head {
+      width: 100%;
+      height: 100px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      > div {
+        height: 100%;
+        flex-grow: 1;
+        font-size: 22px;
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    .search {
+      width: 100%;
+      height: 50px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      border-top: 1px solid black;
+      border-bottom: 1px solid black;
+
+      input {
+        height: 100%;
+        flex-grow: 1;
+        border: none; //去掉默认的边框
+        outline: none; //去掉获取焦点后的边框
+      }
+    }
+
+    .contact-list {
+      overflow: auto;
+      width: 100%;
+      flex-grow: 1;
+    }
+  }
+
+  .dialog { //对话框
+    height: 100%;
+    border: 1px solid black;
+    flex-grow: 1;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .messages {
+      width: 99%;
+      flex-grow: 1;
+      overflow: auto;
+    }
+
+    .tools {
+      width: 100%;
+      height: 52px;
+      flex-shrink: 0;
+      padding-right: 10px;
+      border-top: 1px solid black;
+      border-bottom: 1px solid black;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      div{
+        display: flex;
+        align-items: center;
+      }
+
+      Button {
+        margin-right: 10px;
+      }
+
+      DropDown {
+        margin-right: 10px;
+      }
+    }
+
+    .text {
+      width: 100%;
+      height: 36%;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      textarea {
+        width: 98%;
+        height: 98%;
+        border-radius: 8px;
+        border: 1px solid cornflowerblue; //去掉默认的边框
+        outline: none; //去掉获取焦点后的边框
+        resize: none; //去掉右下角的图形
+      }
+    }
+
+  }
+
+  .info { //对话人信息
+    height: 100%;
+    width: 30%;
+    background: cornflowerblue;
+  }
+}
+
