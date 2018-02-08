@@ -25,5 +25,7 @@
     "react-app-rewired": "^1.4.1"
   },
   "main": "index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": "https://github.com/TonyYang9527/bwoil-demo.git",
+  "author": "SG\\tony.yang <tony.yang@bwoil.com>"
 }
