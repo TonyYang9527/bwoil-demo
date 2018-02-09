@@ -3,6 +3,7 @@ import {observer, inject} from 'mobx-react';
 import {Icon, Button, Menu, Dropdown} from 'antd';
 import './Max.less';
 
+import {Search} from "../Search/Search";
 import {Contact} from "../Contact/Contact";//联系人模板
 import {Message} from "../Message/Message";//消息模板
 import {SendMessage} from "../SendMessage/SendMessage";
@@ -46,14 +47,13 @@ export class Max extends React.Component {
                 <div className='list'>
                     <div className='head'>
                         <div>
-                            <Icon type='user' style={{fontSize: 48, marginLeft: 12}}/>
+                            <img alt=""  src={require('../../assets/guest.jpg')}/>
                             <div>名字</div>
                         </div>
-                        <Icon type='plus' style={{fontSize: 48, marginRight: 12}}/>
+                        <Icon type='plus' style={{fontSize: 32, color: '#C0C0C0', marginRight: 12}}/>
                     </div>
                     <div className='search'>
-                        <Icon type='search' style={{fontSize: 36, marginLeft: 6}}/>
-                        <input placeholder='请输入待查找内容'/>
+                        <Search/>
                     </div>
                     <div className='contact-list'>
                         {list.map((elem, index) => <Contact name={elem.name} key={index} number={index}/>)}

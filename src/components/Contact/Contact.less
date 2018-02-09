@@ -4,25 +4,31 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid black;
 
   .icon {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 30px;
-    height: 30px;
+    width: 36px;
+    height: 36px;
     margin: 0 16px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+    }
 
     div {
       position: absolute;
-      right: 2px;
-      bottom: 2px;
-      width: 8px;
-      height: 8px;
-      background: aquamarine;
+      left: 2px;
+      top: 2px;
+      width: 10px;
+      height: 10px;
+      background: mediumspringgreen;
       border-radius: 50%;
+      border: 1px black solid;
     }
   }
 
@@ -33,13 +39,27 @@
     align-items: flex-start;
     justify-content: center;
     font-size: 16px;
+    color: white;
 
-    .name {
-      color: #000000;
+    .hint {
+      display: flex;
+      align-items: center;
+
+      .count {
+        width: 16px;
+        height: 16px;
+        margin-left: 10px;
+        font-size: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background: red;
+      }
     }
 
-    .company {
-      color: #CDC9C9;
+    .overview {
+      font-size: 12px;
     }
   }
 
@@ -50,14 +70,19 @@
     font-size: 14px;
     margin-right: 16px;
 
-    .count {
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      background: #CDC9C9;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    .time {
+      color: #CDC9C9;
+      font-size: 4px;
     }
+
+    img {
+      width: 12px;
+      height: 20px;
+    }
+
   }
+}
+
+.contact:hover, .contact:active {
+  background: #666666;
 }

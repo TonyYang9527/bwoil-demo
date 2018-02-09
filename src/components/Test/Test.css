@@ -1,0 +1,14 @@
+.container {
+    width: 100vw;
+    height: 100vh;
+}
+
+.moving {
+    background: cornflowerblue;
+    position: fixed;
+    left: 200px;
+    top: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
