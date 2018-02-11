@@ -1,9 +1,11 @@
 import React from 'react';
 import {action} from 'mobx';
 import {observer, inject} from 'mobx-react';
-import {Dropdown, Menu ,Avatar,Badge} from 'antd';
+import { Dropdown, Menu} from 'antd';
+import img from '../../assets/guest.jpg'
 import './Contact.less';
-
+import UserAvatar from '../../common/userAvatar.jsx';
+import UserAvatarWithBadge from '../../common/UserAvatarWithBadge.jsx';
 
 @inject('imdata')
 @observer
@@ -34,13 +36,13 @@ export class Contact extends React.Component {
                 </Menu.Item>
             </Menu>
         );
+
         return (
             <div className='contact' onClick={this.choose}>
 
-                <div className='icon' >
-                    <Badge  dot={true}  status ={"success" }  style={{top: 25}} ><Avatar shape="circle" icon="user" /></Badge>
-                </div>
-                
+   
+                <UserAvatarWithBadge shape={"circle"} size={"large"} icon={"user"} src={img} status={'success'} > </UserAvatarWithBadge>
+
                 <div className='information'>
                     <div className='hint'>
                         <div className='name'>MaYun</div>
