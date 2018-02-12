@@ -1,22 +1,22 @@
 import React from 'react';
 import './Message.less';
-
-const guest = require('../../assets/guest.jpg');
-const master = require('../../assets/master.jpg');
-
 export class Message extends React.Component {
     render() {
         let fromOwner = this.props.fromOwner;
-        let message = this.props.message;
+        let message = this.props.message === undefined ? '' : this.props.message;
         return (
             fromOwner ?
                 <div className='guest'>
-                    <img src={guest} alt=''/>
-                    <div>{message}</div>
+                    <div>
+                        <span className='message'>{message}</span>
+                        <span className='time'>09:00</span>
+                    </div>
                 </div> :
                 <div className='master'>
-                    <div>{message}</div>
-                    <img src={master} alt=''/>
+                    <div>
+                        <span className='message'>{message}</span>
+                        <span className='time'>09:00</span>
+                    </div>
                 </div>
         )
     }

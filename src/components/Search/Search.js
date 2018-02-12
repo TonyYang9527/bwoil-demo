@@ -37,10 +37,10 @@ export class Search extends React.Component {
         const suffix = this.data.value ?
             <Icon type="close-circle" style={{color: '#CFCFCF', fontSize: 16}} onClick={this.empty}/> : null;
         return (
-            <Input placeholder="Search contact..." size="large" value={this.data.value} prefix={prefix}
+            <Input placeholder="Search contact..." size="default" value={this.data.value} prefix={prefix}
                    suffix={suffix}
                    onChange={this.onChange}
-                   onPressEnter={this.onPressEnter}/>
+                   onPressEnter={this.onPressEnter}   style={{width:230,height:32, background:'#2E2E2E', marginTop: 14, marginBottom: 14 , marginRight: 10, marginLeft: 10}} />
         );
     }
 }

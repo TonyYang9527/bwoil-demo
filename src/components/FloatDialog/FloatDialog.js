@@ -5,10 +5,6 @@ import {Icon, Button} from 'antd';
 
 import './FloatDialog.less';
 import {Message} from "../Message/Message";
-import {SendMessage} from "../SendMessage/SendMessage";
-import {SendPicture} from "../SendPicture/SendPicture";
-import {SendScreenShot} from "../SendScreenShot/SendScreenShot";
-import {SendLink} from "../SendLink/SendLink";
 
 @inject('imdata', 'floatDialogController')
 @observer
@@ -116,10 +112,7 @@ export class FloatDialog extends React.Component {
                                                         key={index}/>)}
                 </div>
                 <div className='tools' ref={tools => this.tools = tools}>
-                    <SendMessage/>
-                    <SendPicture/>
-                    <SendScreenShot/>
-                    <SendLink/>
+
                 </div>
                 <div className='input'>
                     <textarea className='text'/>

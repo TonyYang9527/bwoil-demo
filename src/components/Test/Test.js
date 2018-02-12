@@ -1,9 +1,11 @@
 import React from 'react';
 import {action} from 'mobx';
 import {observer} from 'mobx-react';
+import {Avatar} from 'antd';
 import './Test.css';
 
 import {Data} from './Data';
+import {Schedule} from "../Schedule/Schedule";
 
 @observer
 export class Test extends React.Component {
@@ -45,6 +47,11 @@ export class Test extends React.Component {
         this.data.blur();
     }
 
+    @action.bound
+    click(){
+        console.log('头像被点击');
+    }
+
     render() {
         return (
             <div className='container'>
@@ -57,7 +64,9 @@ export class Test extends React.Component {
                      onMouseMove={this.move}
                      onMouseUp={this.up}
                      onMouseLeave={this.leave}>
+                    <Avatar style={{width: 48, height: 48}} src={require('../../assets/guest.jpg')} onClick={this.click}/>
                 </div>
+
             </div>
         );
     }

@@ -26,7 +26,7 @@ export class Min extends React.Component {
     render() {
         return (
             <div className='min' onClick={this.change}>
-                 <Icon type='user' style={{fontSize: 16, color: '#08c', marginLeft: 16, marginRight: 16}}/>
+                <Icon type='user' style={{fontSize: 16, color: '#08c', marginLeft: 16, marginRight: 16}}/>
                 <div>Chat</div>
             </div>
         )
