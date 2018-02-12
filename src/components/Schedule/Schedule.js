@@ -8,17 +8,22 @@ const Step = Steps.Step;
 export class Schedule extends React.Component {
 
     render() {
-        let current = this.props.current === undefined ? 0 : this.props.current;
+        let current = this.props.current === undefined ? 3 : this.props.current;
         return (
             <div className='schedule'>
-                <Steps current={current} size='small' style={{width:480}}>
-                    <Step title='Chat'/>
-                    <Step title='Offer'/>
-                    <Step title='Onsub'/>
-                    <Step title='Liftsub'/>
+             <div >
+              <Steps current={current} size='small' style={{width:400}} > 
+                    <Step title='Chat'   />
+                    <Step title='Offer'     />
+                    <Step title='Onsub'    />
+                    <Step title='Liftsub'  />
                 </Steps>
-                <Icon type="info-circle" style={{fontSize: 22, color: '#D3D3D3'}}/>
+                </div>
+                 <div>
+                   <Icon type="info-circle" style={{fontSize: 16, color: '#D3D3D3'}}/>
+                </div>
             </div>
+         
         );
     }
 }
