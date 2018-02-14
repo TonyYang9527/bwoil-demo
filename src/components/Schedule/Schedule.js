@@ -20,7 +20,7 @@ export class Schedule extends React.Component {
                 </Steps>
                 </div>
                  <div>
-                   <Icon type="info-circle" style={{fontSize: 16, color: '#D3D3D3'}}/>
+                   <Icon type="info-circle" style={{fontSize: 16, color: '#D3D3D3'}} />
                 </div>
             </div>
          

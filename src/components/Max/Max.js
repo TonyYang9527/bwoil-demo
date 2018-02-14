@@ -12,12 +12,16 @@ import { Scrollbars } from 'react-custom-scrollbars';
 
 @inject('imdata')
 @observer
-export class Max extends React.Component {
 
+export class Max extends React.Component {
+    
     addContact() {
     console.log("add  contact function  is building ......")
     }
 
+    componentDidMount(){
+        this.refs.messageScroll.scrollToBottom(); 
+    }
 
     render() {
         let list = [];//模拟联系人名单
@@ -31,31 +35,29 @@ export class Max extends React.Component {
         for (let i = 0; i < 20; i++) {
             let temp = {};
             temp.time = new Date();
-            temp.message = 'guest' + (i + 1);
+            temp.message = 'messagedddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd' + (i + 1);
             temp.fromOwner = (i % 2 === 0);
             messages.push(temp);
         }
-
         return (
             <div className='max'>
                 <div className='list'>
                 
                     <div className='head'>
                         <div>
-                            <Avatar className ="userIcon"  icon="user"  size="large"  />
+                           <Avatar className ="userIcon"  icon="user"  size="large"  />
                             <span className ="userName">George Sparks</span>
                         </div>
-                        <Icon  type='plus' style={{fontSize: 18, color: '#C0C0C0', marginRight: 12,marginLeft: 10}}  onClick={this.addContact}  />
+                        <Icon  type='plus' style={{fontSize: 18, color: '#C0C0C0', marginRight: 12,marginLeft: 10}}   onClick={()=>{alert("add user is  building");}}  />
                     </div>
 
                     <div className='search'>
-                        <Search   />
+                        <Search  />
                     </div>
-                    
-                       <Scrollbars style={{ width: 250, height: 662 }}>
-                          {list.map((elem, index) => <Contact name={elem.name} key={index} number={index}/>)}
-                       </Scrollbars>
-
+                  
+                   <Scrollbars style={{ width: 250, height: 662 }}>
+                        {list.map((elem, index) => <Contact name={elem.name} key={index} number={index}/>)}
+                    </Scrollbars>
                 </div>
 
 
@@ -63,19 +65,56 @@ export class Max extends React.Component {
                     <div className='steps'>
                         <Schedule/>
                     </div>
-                    <div className='messages'>
-                        {messages.map((elem, index) => <Message fromOwner={elem.fromOwner} message={elem.message}
-                                                                key={index}/>)}
+                   
+                    <div className='messages'  >
+                    <Scrollbars  ref="messageScroll"   >
+                      {messages.map((elem, index) =><Message fromOwner={elem.fromOwner} message={elem.message} key={index}/>)}
+                    </Scrollbars>
                     </div>
+
                     <div className='tool'>
-                        <Tools/>
+                       <Tools/>
                     </div>
+
                     <div className='text'>
-                        <textarea/>
+                      <textarea/>
                     </div>
+
                 </div>
-                <div className='info'>
-            
+                <div className='info'>      
+
+                     <div className="info-header" >
+                     <span>
+                       <Icon type="close"  size="large" style={{fontSize:16,marginTop: 7}} onClick={()=>{alert("close is  building ");}}/>
+                     </span>
+                     <span>
+                        <Icon type="minus"   size="large" style={{fontSize:16 ,marginTop: 7}} onClick={()=>{alert("minus is  building");}} />
+                     </span>
+                    </div>
+                
+                    <div className="info-cargo">
+                       <div  className="info-cargo-user">
+                         <Avatar   icon="user"  size="large"  />
+                         <span>George Sparks</span>
+                       </div>
+
+                       <div className="info-cargo-detail" >  
+                            <div>                            
+                            <span> Cargo </span> 
+                               <label>Cargo </label> 
+                          </div>
+
+                          <div>                            
+                            <span> Cargo </span> 
+                               <label>Cargo </label> 
+                          </div>
+                       </div>
+                     
+                    </div>
+                    
+                     <div className="info-vessel">
+                    </div>
+
                 </div>
             </div>
         );

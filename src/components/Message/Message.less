@@ -1,47 +1,58 @@
-.guest, .master {
-  width: 100%;
-  margin: 6px 0;
-  display: flex;
-
-}
-
-.guest {
-  align-items: center;
-  justify-content: flex-start;
-
-  div {
-    max-width: 50%;
-    border-radius: 6px;
-    background: #DEDEDE;
-    padding: 12px;
-    display: flex;
-    flex-direction: column;
-
-  }
-}
 
 .master {
   align-items: center;
   justify-content: flex-end;
+  width: 500px;
+  //height: 56px;
+  margin: 10px 0 10px 0 ;
+  display: flex;
 
   div {
-    max-width: 50%;
+    max-width: 58%;
+    height: auto ;
+    overflow: hidden ;
     border-radius: 6px;
     background: #B0E2FF;
-    padding: 12px;
-    display: flex;
     flex-direction: column;
+    margin-right: 16px;
+    word-wrap: break-word; 
+    word-break: normal; 
+    word-break:break-all;
+  }
+}
+
+
+.guest {
+  align-items: center;
+  justify-content: flex-start;
+  width: 500px;
+  //height: 56px;
+  margin: 5px 0 5px 0 ;
+  display: flex;
+
+  div {
+    max-width: 60%;
+    height: auto ;
+    overflow: hidden ;
+    border-radius: 6px;
+    background: #DEDEDE;
+    flex-direction: column;
+    margin-left: 16px;
+    word-wrap: break-word; 
+    word-break:break-all;
+  
   }
 }
 
 .message {
-  font-size: 18px;
+  font-size: 14px;
   align-self: center;
   color: black;
 }
 
 .time {
-  font-size: 12px;
+  font-size: 10px;
   align-self: flex-end;
-  color: #BEBEBE;
+  color: #B0B0B0;
+  float: right;
 }
