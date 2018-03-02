@@ -1,7 +1,6 @@
 import React from 'react';
 import {action} from 'mobx';
 import {observer, inject} from 'mobx-react';
-import {Icon} from 'antd';
 import './Min.less';
 import {Demo} from "../demo/Demo" ;
 
