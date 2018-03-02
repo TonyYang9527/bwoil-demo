@@ -3,6 +3,7 @@ import {action} from 'mobx';
 import {observer, inject} from 'mobx-react';
 import {Icon} from 'antd';
 import './Min.less';
+import {Demo} from "../demo/Demo" ;
 
 @inject('imdata')
 @observer
@@ -25,10 +26,10 @@ export class Min extends React.Component {
 
     render() {
         return (
-            <div className='min' onClick={this.change}>
-                <Icon type='user' style={{fontSize: 16, color: '#08c', marginLeft: 16, marginRight: 16}}/>
-                <div>Chat</div>
-            </div>
+            <div> 
+            <div className=' widget-container min2' onClick={this.change}> </div>
+            <Demo name="Bill"></Demo>
+           </div>
         )
     }
 }

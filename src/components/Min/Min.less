@@ -1,11 +1,31 @@
-.min {
+@font-face {
+  font-family: icomoon;
+  src: url(../../assets/icomoon.ttf);
+}
+.min2 {
   position: fixed;
   right: 10px;
   bottom: 10px;
-  display: flex;
-  align-items: center;
-  width: 120px;
-  height: 30px;
-  background: #EED5D2;
-  border-radius: 6px;
+  background-color:#0081CC;
+  color: rgb(255, 255, 255);
+}
+
+.widget-container::before{
+  font-family: 'icomoon';
+  margin: 13px;
+  line-height: 60px;
+  content: "\e96c";
+  vertical-align: middle;
+} 
+.widget-container {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin: auto;
+  font-size: 28px;
+  -webkit-box-shadow: 0 4px 5px -1px rgba(0,0,0,.5);
+  -moz-box-shadow: 0 4px 5px -1px rgba(0,0,0,.5);
+  box-shadow: 0 4px 5px -1px rgba(0,0,0,.5);
+  vertical-align: middle;
 }

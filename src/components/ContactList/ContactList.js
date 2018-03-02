@@ -35,7 +35,6 @@ export class ContactList extends React.Component {
         }
         return (
             <div className='contactList'>
-
                 <div className='top'>
                     <Icon type='credit-card' style={{fontSize: 18, marginRight: 8,color: '#c3c3c3',}} onClick={this.maximize}/>
                     <Icon type='close'   style={{fontSize: 18, marginRight: 8,color: '#c3c3c3',}}   onClick={this.close}/>
